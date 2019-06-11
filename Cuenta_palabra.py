@@ -2,7 +2,7 @@ from tkinter import Tk,Label,Button,Frame
 
 proceso=0
 
-def iniciar(contador=0):
+def iniciar(contador=10):
     global proceso
 
     # mostramos la variable contandor
@@ -16,8 +16,15 @@ def parar():
     global proceso
     time.after_cancel(proceso)
 
+
+
+
+
+
+
+
 root = Tk()
-root.title('Cronometro')
+root.title('Cuenta Palabras')
 
 time = Label(root, fg='red', width=20, font=("","18"))
 time.pack()
@@ -33,5 +40,5 @@ btnIniciar.grid(row=1, column=1)
 btnParar=Button(frame, fg='blue', text='Parar', command=parar)
 btnParar.grid(row=1, column=2)
 frame.pack()
- 
+
 root.mainloop()
